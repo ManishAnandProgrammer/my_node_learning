@@ -1,0 +1,6 @@
+
+1: if we need to add module than we have to use it's path and file name inside required()
+	
+	example : const date = require('./my_first_module');
+
+	"./" means module is located in the same folder 
