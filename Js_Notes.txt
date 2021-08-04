@@ -1,0 +1,123 @@
+
+-----------------------------
+As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+
+The benefit of a separate file is that the browser will download it and store it in its cache.
+
+Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+
+That reduces traffic and makes pages faster
+
+-----------------------------
+
+A single <script> tag can’t have both the src attribute and code inside.
+
+This won’t work:
+
+<script src="file.js">
+  alert(1); // the content is ignored, because src is set
+</script>
+
+-----------------------------
+
+it is possible to leave out semicolons most of the time.
+But it’s safer – especially for a beginner – to use them
+
+-----------------------------
+
+The directive looks like a string: "use strict" or 'use strict'. When it is located at the top of a script, the whole script works the “modern” way
+
+Please make sure that "use strict" is at the top of your scripts, otherwise strict mode may not be enabled.
+
+Strict mode isn’t enabled here:
+
+	alert("some code");
+	// "use strict" below is ignored--it must be at the top
+
+	"use strict";
+
+	// strict mode is not activated
+
+-----------------------------
+
+In JavaScript, there are 3 types of quotes.
+
+ 1 : Double quotes: "Hello".
+ 2 : Single quotes: 'Hello'.
+ 3 : Backticks: `Hello`.
+
+	double quotes example = let str = "Hello";
+	signle quotes example = let str2 = 'Single quotes are ok too';
+	backticks example = let phrase = `can embed another ${str}`;
+
+-----------------------------
+
+In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+
+It’s just a special value which represents “nothing”, “empty” or “value unknown”.
+
+The code below states that age is unknown.
+
+let age = null;
+
+-----------------------------
+
+The special value undefined also stands apart. It makes a type of its own, just like null.
+
+The meaning of undefined is “value is not assigned”.
+
+If a variable is declared, but not assigned, then its value is undefined:
+
+	let age;
+
+	alert(age); // shows "undefined"
+
+Technically, it is possible to explicitly assign undefined to a variable:
+
+	let age = 100;
+
+	// change the value to undefined
+	age = undefined;
+
+	alert(age); // "undefined"
+
+-------------------------------
+
+There are 8 basic data types in JavaScript.
+
+ 1: number = for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
+ 2: bigint = is for integer numbers of arbitrary length.
+ 3: string = for strings. A string may have zero or more characters, there’s no separate single-character type.
+	boolean for true/false.
+ 4: null = for unknown values – a standalone type that has a single value null.
+ 5: undefined = for unassigned values – a standalone type that has a single value undefined.
+ 6: object for more complex data structures.
+ 7: symbol for unique identifiers.
+ 8: The typeof operator allows us to see which type is stored in a variable.
+
+Two forms: typeof x or typeof(x).
+Returns a string with the name of the type, like "string".
+For null returns "object" – this is an error in the language, it’s not actually an object.
+In the next chapters, we’ll concentrate on primitive values and once we’re familiar with them, we’ll move on to objects.
+
+---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
